@@ -96,7 +96,7 @@ jobs:
 
     - name: Cache SDL2 if it has beed fetched by CMake or else restore it from cache without fetching again
       id: ID-SDL2-fetched-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: External/SDL2
         key: KEY-SDL2-fetched-cache
@@ -150,7 +150,7 @@ jobs:
     - name: On Mac (with SDL2 installed by package manager) cache SDL2 (if not yet cached) or else restore it from cache (if cached already)
       if: ${{matrix.os == 'macos-latest'}}
       id: mac-ID-SDL2-installed-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: /usr/local/Cellar/sdl2
         key: mac-KEY-SDL2-installed-cache
@@ -194,7 +194,7 @@ jobs:
     - name: On Windows (with SDL2 binaries installed) cache SDL2 (if not yet cached) or else restore it from cache (if cached already)
       if: ${{matrix.os == 'windows-latest'}}
       id: windows-ID-SDL2-installed-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: C:\SDL2
         key: windows-KEY-SDL2-installed-cache
@@ -349,7 +349,7 @@ jobs:
 
     - name: Cache SDL2 if it has beed fetched by CMake or else restore it from cache without fetching again
       id: ID-SDL2-fetched-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: External/SDL2
         key: KEY-SDL2-fetched-cache
@@ -403,7 +403,7 @@ jobs:
     - name: On Mac (with SDL2 installed by package manager) cache SDL2 (if not yet cached) or else restore it from cache (if cached already)
       if: ${{matrix.os == 'macos-latest'}}
       id: mac-ID-SDL2-installed-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: /usr/local/Cellar/sdl2
         key: mac-KEY-SDL2-installed-cache
@@ -447,7 +447,7 @@ jobs:
     - name: On Windows (with SDL2 binaries installed) cache SDL2 (if not yet cached) or else restore it from cache (if cached already)
       if: ${{matrix.os == 'windows-latest'}}
       id: windows-ID-SDL2-installed-cache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: C:\SDL2
         key: windows-KEY-SDL2-installed-cache
